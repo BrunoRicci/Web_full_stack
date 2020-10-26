@@ -1,0 +1,32 @@
+body{
+    background-image: url('../img/rojo.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background-color: #a01a1a;
+}
+
+#menu a:hover{
+    background-color: #a01a1a;
+}
+
+.button-more{
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background: #a01a1a;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 70% ;
+}
+
+#sidebar h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+    background: url('../img/lines.png') repeat-x ;
+}

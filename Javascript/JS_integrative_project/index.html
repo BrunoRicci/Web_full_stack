@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Proyecto con JavaScript</title>
+
+		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="./js/jquery.form-validator.min.js"></script>
+		<script src="../First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="../First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.min.css">
+		<link rel="stylesheet" href="../First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="../First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+
+		<!-- Slider --> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+		<script src="js/jquery.bxslider.min.js"></script>
+		
+		<!-- Moment -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link id="theme" rel="stylesheet" type="text/css" href="css/theme_green.css" />
+		<!-- My Scripts -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="selector-theme">
+			<div id="to-green"></div>
+			<div id="to-red"></div>
+			<div id="to-blue"></div>
+		</div>
+
+		<section id="global">
+
+			<!-- Cabecera -->
+			<header>
+				<div id="logo">
+					<h1>JS PROJECT</h1>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<nav id="menu">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="reloj.html">CLOCK</a></li>
+						<li><a href="about.html">ABOUT ME</a></li>
+						<li><a id="button_contact" href="contact.html">CONTACT</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Slider -->
+			<div id="slider">
+				<div class="gallery">
+				  <div><img src="img/caracol.jpg" title="Leaf"></div>
+				  <div><img src="img/rojo.jpg" title="The long and winding road"></div>
+				  <div><img src="img/cielo.jpg" title="Happy trees"></div>
+				</div>
+			</div>
+
+			<!-- Contenido -->
+			<section id="content">
+
+				<div id="posts">
+					<!--Load posts from json -->
+				</div>
+
+				<aside id="sidebar">
+					<div id="about">
+						<h4><span>Who am I?</span></h4>
+						<img id="avatar" src="img/rojo.jpg" />
+						<p id="user_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo.</p>
+					</div>
+
+					<div id="login">
+						<h4><span>Log in</span></h4>
+						<form>
+							<label for="name">
+								Name
+							</label>
+							<input type="text" name="name" id="form_name"/>
+
+							<label for="email">
+								E-mail
+							</label>
+							<input type="text" name="form_email" />
+
+							<label for="password">
+								Password
+							</label>
+							<input type="password" name="form_password" />
+
+							<input type="submit" value="Log in" />
+						</form>
+					</div>
+
+					<div id="clock">
+						
+					</div>
+
+				</aside>
+
+				<div class="clearfix"></div>
+			</section>
+
+			<section id="contact" style="display:none">
+				
+				<form action="#" method="POST" id="form_contact" >
+
+					<label for="name">Name</label>
+					<input type="text" name="name" data-validation="alphanumeric">
+					<label for="surname">Surname</label>
+					<input type="text" name="surname" data-validation="alphanumeric">
+					<label for="email">E-mail</label>
+					<input type="email" name="email" data-validation="email">
+
+					<label for="sex">Sex</label>
+					<select name="sex" data-validation="required">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+					<br><br>
+					<label for="dateofbirth">Date of birth</label>
+					<input id="dateofbirth" type="text" name="dateofbirth" data-validation="date" data-validation-format="dd/mm/yyyy">
+					<label for="age">Age</label>
+					<input type="text" name="age" data-validation="number">
+					<br>
+					<span class="help-block form-error"></span>
+					<br>
+					<input type="submit" value="Send">
+				</form>
+
+			</section>
+		</section>
+
+		<footer>
+			<span>JS Master integrative project.</span>
+			<a href="#" class="subir" style="">Ir arriba</a>
+		</footer>
+	</body>
+</html>

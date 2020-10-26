@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Responsive -->
+
+    <title>Test page</title>
+    <style>
+        
+        body{
+            padding: 10px;
+        }
+
+        input{
+            margin: 10px;
+            display: block;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="POST"  id="form_add_movie"  onsubmit="return false;" >
+        
+        <h3>Enter a movie</h3>
+
+        <input type="text" id="movie_name" placeholder="Movie name" />
+       
+        <br>
+
+        <input type="submit" value="Submit!"
+        style=" border-radius: 4px; 
+                background-color: #c5f8bb;
+                padding: 5px 15px;
+                font-size: 15px;
+                font-weight: bold;
+        "></input>
+    </form>
+    <br>
+    <br>
+
+        <h2>Movies list:</h2>
+        <p id="movies_list"></p>
+       
+    <form action="POST"  id="form_delete_movie"  onsubmit="return false;" >
+    
+        <h3>Delete a movie</h3>
+
+        <input type="text" id="delete_movie_name" placeholder="Movie name" />
+        
+        <br>
+
+        <input type="submit" value="Delete"
+        style=" border-radius: 4px; 
+                background-color: #d39999;
+                padding: 5px 15px;
+                font-size: 15px;
+                font-weight: bold;
+        "></input>
+    </form>
+        
+    
+</body>
+
+<script type="text/javascript" src="./localstorage.JS"></script>
+</html>

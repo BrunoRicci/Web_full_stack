@@ -1,0 +1,32 @@
+body{
+    background-image: url('../img/cielo.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background-color: #362db9;
+}
+
+#menu a:hover{
+    background-color: #362db9;
+}
+
+.button-more{
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background: #362db9;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 70% ;
+}
+
+#sidebar h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+    background: url('../img/lines.png') repeat-x ;
+}

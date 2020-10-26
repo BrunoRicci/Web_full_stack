@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryUI</title>
+
+    <script type="text/javascript" src="/Javascript/First_tests/jQuery/jquery-3.5.1.uncompressed.js"></script>
+    <link rel="stylesheet" href="/Javascript/First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="/Javascript/First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.structure.min.css"/>
+    <link rel="stylesheet" href="/Javascript/First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.theme.min.css"/>
+    <script type="text/javascript" src="/Javascript/First_tests/jQueryUI/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    
+
+    <script type="text/javascript" src="/Javascript/First_tests/jQueryUI/jQueryInterface.js"></script>
+
+    <style>
+        .box{
+            border: 2px solid gray;
+            background-color: rgb(255, 193, 193);
+            width: 10rem;
+            height: 10rem;
+            margin: 1rem;
+        }
+        li{
+            width: auto;
+            background-color: rgb(209, 209, 209);
+            border: 1px solid gray;
+            margin: 2px;
+            text-align: center;
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>jQuery UI library usages:</h1>
+
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+
+    <div style="margin:2rem">
+        <h3>Calendar</h3>
+        <input type="text" name="" id="calendar">
+    </div>
+
+
+    <div id="list" style="width: 20rem; border:2px solid black; text-align:center; margin: 1rem;">
+        <div>Item sorting:</div>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </div>
+    
+    <div style="width: 20rem; border:2px solid black; text-align:center; margin: 1rem;">
+        <div>Effects</div>
+        <input id="toggle_effect" type="button" value="Toggle effect">
+        <div id="effects" style="width: 5rem; height:5rem; border: 2px solid black"></div>
+
+    </div>
+
+    <div style="">
+        <input id="btn_popup" type="button" value="Pop up">
+        <div id="popup" title="Are you sure?" style="display:none">
+            <p>You are about to make some action.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
