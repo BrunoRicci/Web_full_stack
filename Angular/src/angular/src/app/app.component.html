@@ -1,0 +1,27 @@
+<div>
+
+    <nav>  <!--routerLink-->
+        <a [routerLink]="['/']" [routerLinkActive]="['active']">Home</a>  <!-- '/' path will be always shown... -->
+        <a [routerLink]="['/mycomponent']" [routerLinkActive]="['active']">MyComponent</a>
+        <a [routerLink]="['/shirts']" [routerLinkActive]="['active']">Shirts</a>
+        <a [routerLink]="['/external']" [routerLinkActive]="['active']">External</a>
+    </nav>
+
+    <h1>Test app!</h1>
+
+    <p>This is a test page using Angular</p>
+
+    <mycomponent></mycomponent>
+
+    <br><br><br>
+
+    <app-myconsole-comp></app-myconsole-comp>
+    <br><br>
+
+    <app-shirts></app-shirts>
+    
+    <div style="border: 2px solid black; margin-top:20px;">
+        <h3>Dynamic URL path routing element</h3>
+        <router-outlet></router-outlet>
+    </div>
+</div>

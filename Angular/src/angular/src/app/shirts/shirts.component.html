@@ -1,0 +1,47 @@
+<div style="border:1px solid gray; border-radius:5px">
+
+    <title>{{title}}</title>
+    
+    <ul>
+        <li *ngFor="let shirt of shirts; let i = index">        <!-- "index" value can be assigned to a variable to be shown. -->
+            <div [ngStyle]="{'text-decoration': (shirt.stock > 0) ? 'none': 'line-through' }" >
+                {{i}}) {{shirt.brand}} ({{shirt.size}})..... <strong>${{shirt.price}}</strong> 
+                <span style="color:red" *ngIf="shirt.price < 20"> SALE! </span>
+            </div>
+        </li>
+    </ul>
+
+    
+
+</div>
+
+<div style="border: 1px solid gray; margin-top:10px;">
+    <p>ngSwitch:   The text inside the colored boxes will change depending on a variable ('color').</p>
+    <p>The elements classes will change depending of conditionals inside [class] and [ngClass] directives.</p>
+    <h3>Conditional [class] directive</h3>
+    <h4>Selected color:</h4>
+    <ul [ngSwitch]="color" [ngStyle]="{'background': color, 'width': '10rem', 'margin':'10px'}" [class.myclass]="color == 'red'" [class.myclass2]="color == 'blue'" >
+        <li *ngSwitchCase="'red'">Red!</li>
+        <li *ngSwitchCase="'green'">Green!</li>
+        <li *ngSwitchCase="'blue'">Blue!</li>
+    </ul>
+    <br><br>
+    <!-- The same element but implementing "ngClass" directive: -->
+    <h3>The same implementing [ngClass] directive</h3>
+    <ul [ngSwitch]="color" [ngStyle]="{'background': color, 'width': '10rem', 'margin':'10px'}" 
+    [ngClass]="{
+        'myclass': color == 'red',
+        'myclass2': color == 'blue'
+    }" >
+        <li *ngSwitchCase="'red'">Red!</li>
+        <li *ngSwitchCase="'green'">Green!</li>
+        <li *ngSwitchCase="'blue'">Blue!</li>
+    </ul>
+</div>
+
+<div style="border:1px solid gray; border-radius:5px">
+    <p>Brands</p>
+    <input type="text" [(ngModel)]="my_brand" (keyup.enter)="getBrand()" >
+    <strong>{{my_brand}}</strong>
+    <button id="show_brands" (click)="getBrand()">Show brands</button> 
+</div>

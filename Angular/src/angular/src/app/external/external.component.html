@@ -1,0 +1,29 @@
+<p>external works!</p>
+
+<input type="text" [(ngModel)]="userid" (keyup.enter)="loadUser()">
+
+<h3 *ngIf="!user">
+    Loading...
+</h3>
+
+<h3 *ngIf="user">
+    <p>Obtained user: {{user.first_name + ' ' +user.last_name}}</p>
+    <img src="{{user.avatar}}" alt="avatar">
+</h3>
+<br>
+<br>
+
+<div>
+
+    <h2>Pipes</h2>
+    <br>
+
+    <p>Date: {{date}}</p>
+    <p>Date: {{date | date:'dd/MM/yyyy'}}</p>
+
+    <p>Lowercase: {{'Hello World' | lowercase}}</p>
+    <p>Uppercase: {{'Hello World' | uppercase}}</p>
+
+    <p>Custom pipe: {{50 | custompipe: 50}}</p>
+
+</div>

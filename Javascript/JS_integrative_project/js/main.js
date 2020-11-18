@@ -96,7 +96,12 @@ $(document).ready(()=>{
         $('#dateofbirth').datepicker({
             dateFormat: 'dd/mm/yy'    //Specify date format output.
         });
-        $.validate({lang:'es'});
+
+        $.validate({        //jQuery form validation plugin
+            lang:'es',
+            errorMessagePosition: 'top',    //Error messages.
+            scrollToTopOnError: true,
+        });
 
         $('#form_contact').click((e)=>{
             e.preventDefault();
