@@ -1,4 +1,22 @@
-<p>external works!</p>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+
+    <p>
+        <label for="name">Name</label><br>
+        <input type="text" name=name #name="ngModel" [(ngModel)]="new_user.name" required>
+        <span *ngIf="name.touched && !name.valid">Fill this field!</span>
+    </p>
+    <p>
+        <label for="job">Job</label><br>
+        <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required>
+        <span *ngIf="job.touched && !job.valid">Fill this field!</span>
+    </p>
+    <input type="submit" value="Save user" [disabled]="!newUser.valid">
+
+
+</form>
+
+<br><br>
+<hr>
 
 <input type="text" [(ngModel)]="userid" (keyup.enter)="loadUser()">
 
@@ -27,3 +45,5 @@
     <p>Custom pipe: {{50 | custompipe: 50}}</p>
 
 </div>
+
+

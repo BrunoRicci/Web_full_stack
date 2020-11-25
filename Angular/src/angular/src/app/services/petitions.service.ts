@@ -16,5 +16,12 @@ export class PetitionsService{
         return this._http.get(this.url+'api/users/'+id);
     }
 
+    addUser(user):Observable<any>{
+        let json_values = JSON.stringify(user);
+        let headers = new HttpHeaders().set('Content-type','applicatoin/json'); //Set header
+        console.log('sending values:'+json_values);
+        
+        return this._http.post(this.url+'api/users',json_values, {headers: headers});
+    }
 
 }
