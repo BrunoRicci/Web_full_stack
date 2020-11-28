@@ -1,0 +1,8 @@
+@font-face{
+    font-family: 'Roboto-Light';
+    src: url('/angular-project/src/assets/fonts/Roboto/Roboto-Light.ttf');
+}
+
+h1{
+    font-family: "Roboto";
+}
