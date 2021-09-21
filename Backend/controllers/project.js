@@ -2,6 +2,7 @@
 
 var Project = require('../models/project');
 var fs = require('fs');
+var path = require('path');
 
 var controller = {
 
@@ -27,7 +28,9 @@ var controller = {
         project.category = params.category;
         project.year = params.year;
         project.langs[0] = params.langs; 
-        project.image = null;
+        project.image = params.image;
+
+        console.log('Project to be saved:', params);
 
         project.save((err, projectStored)=>{
             if(err) return res.status(500).send({message:'Error while saving document.'});
@@ -79,6 +82,7 @@ var controller = {
 
     deleteProject: function(req,res){
         var project_id = req.params.id;
+        console.log('deleted project:', project_id)
         Project.findByIdAndDelete(project_id, (err,project_deleted)=>{
             if(err) return res.status(500).send({message:'Could not delete this project.'});
             if(!project_deleted) return res.status(404).send({message:'Project not found or already deleted.'});
@@ -96,7 +100,7 @@ var controller = {
             // console.log(req.files.image.path.split('\\'));   
             var filename = req.files.image.path.split('\\')[1];     //File name is assigned automatically.
             var fileext = filename.split('.')[1].toLowerCase();   //Gets file extension...
-            console.log(fileext);
+            console.log('File name', filename);
 
             if(fileext == 'png' || fileext == 'jpg' || fileext == 'jpeg' || fileext == 'gif' ){
                 Project.findByIdAndUpdate(project_id, {image: filename}, (err, savedfile)=>{
@@ -120,6 +124,20 @@ var controller = {
         else{
             return res.status(404).send({message: 'File not uploaded.'});
         }
+    },
+
+    getImageFile: function(req,res){
+        
+        var file = req.params.file;
+        var path_file = './uploads/'+file;
+        console.log(file);
+        fs.exists(path_file, (exists)=>{
+            if(exists){
+                return res.status(200).sendFile(path.resolve(path_file));
+            }else{
+                return res.status(200).send({message:`Image ${path_file} does not exist!`});
+            }
+        });
     }
 
 

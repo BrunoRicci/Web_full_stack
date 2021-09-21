@@ -1,15 +1,24 @@
-<h1>Angular project</h1>
-
-<ul>
-  <li> <a [routerLink]="['/aboutme']">About Me</a></li>
-  <li> <a [routerLink]="['/projects']">Projects</a></li>
-  <li> <a [routerLink]="['/createproject']">Create Project</a></li>
-  <li> <a [routerLink]="['/contact']">Contact</a></li>
-
-
-</ul>
-
+<header>
+  <ul>
+    <li> <a [routerLink]="['/aboutme']">About Me</a></li>
+    <li> <a [routerLink]="['/projects']">Projects</a></li>
+    <li id="logo"> <a href="#">Br</a> </li>
+    <li> <a [routerLink]="['/createproject']">Create Project</a></li>
+    <li> <a [routerLink]="['/contact']">Contact</a></li>
+  </ul>
+</header>
 
 
-<!-- Redirecing -->
-<router-outlet></router-outlet>
+
+
+
+
+<section id="content">
+  <!-- Redirecing -->
+  <router-outlet></router-outlet>
+</section>
+
+
+<footer>
+  Angular project page. &copy;
+</footer>

@@ -6,6 +6,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DescriptionComponent } from './components/description/description.component'
 
 const appRoutes: Routes = [
     {path: '', component: AboutmeComponent},
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
     {path: 'projects', component: ProjectsComponent},
     {path: 'createproject', component: CreateComponent},
     {path: 'contact', component: ContactComponent},
+    {path: 'project/:id', component: DescriptionComponent},
     {path: '**', component: ErrorComponent}
 
 ];

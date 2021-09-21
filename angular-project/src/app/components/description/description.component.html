@@ -1,0 +1,18 @@
+<div class="description_container" style="margin:auto; display:flex">
+
+
+    <img src="{{url+'/getimage/'+project.image}}" alt="">
+    
+    <div>
+    <div class="project_title">{{project.name}}</div>
+    <div class="project_category">{{project.category}}</div>
+    </div>
+    <div class="project_description ">{{project.description}}</div>
+
+</div>
+
+<div>
+    <a href="#" class="btn_edit">Edit</a>
+    <button (click)="deleteProject(project._id)" class="btn_delete">Delete</button>    
+    <!-- error on project._id (property doesn't exist but it works..) -->
+</div>

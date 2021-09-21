@@ -1,8 +1,281 @@
 @font-face{
     font-family: 'Roboto-Light';
-    src: url('/angular-project/src/assets/fonts/Roboto/Roboto-Light.ttf');
+    src: url('/../assets/fonts/Roboto/Roboto-Light.ttf');   /*Exit folder, then enter to assets/fonts/Roboto...*/
 }
 
-h1{
-    font-family: "Roboto";
+@font-face{
+    font-family: 'Madina';
+    src: url('/../assets/fonts/Madina/Madina.ttf');
+}
+
+:root{
+    --header-color: rgba(53,103,164 ,0.8);
+}
+
+.clearfix{
+    float:none;
+    clear:both;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Roboto-Light';
+    font-size: 20px;
+    background: url('/../assets/img/pattern.png');
+    width: 100%;
+    margin:0;
+    /* position: fixed; */
+    overflow: auto;
+}
+
+header{
+    width: 100%;
+    min-height: 90px;
+    background: var(--header-color);
+    position: fixed;
+    text-transform: uppercase;
+    overflow: hidden;
+    align-content: space-between;
+}
+
+header ul{
+    display: block;
+    width: 80%;
+    height: inherit;
+    margin: 0px auto;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+}
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color:white;
+    transition: all 300ms;
+}
+header a:hover{
+    background: rgba(0,0,0,0.5);
+}
+
+#logo{
+    font-family: 'Madina';
+    font-size: 50px;
+    font-weight: 900;
+    color:white;
+    margin-inline:3%;
+}
+#logo a{
+    transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+    background: transparent;
+    color:black;
+    transform: scale(1.5, 1.5);
+}
+
+#content{
+    min-height: 500px;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+    border-left: 1px solid #b7b7b7;
+    background: rgba(255,255,255,0.7);
+    padding-top: 120px;
+    
+}
+
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0, 0, 0, .5);
+}
+
+#title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#title h1{
+    font-family: Cambria;
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+
+#title h2{
+    font-size: 25px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+article.about{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.about h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.about p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+/* Form section */
+
+.container{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form{
+    width: 80%;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type=text],
+form input[type=number],
+form input[type=email],
+form textarea{
+    width: 40%;
+    padding-left: 5px;
+}
+
+form button,
+form input[type="submit"]{
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 15px;
+    color: white;
+    background: var(--header-color);
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+    background: var(--header-color);
+    border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form_error{
+    font-size: 13px;
+    padding: 3px;
+    background: red;
+    color:white;
+    margin-left: 5px;
+}
+
+.project_container{
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px gray;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.project_title{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Roboto-Light';
+    overflow: hidden;
+    margin: 7% 5%;
+}
+
+.project_category{
+    font-weight: 400;
+    font-family: 'Courier';
+    overflow: hidden;
+    margin: 7% 3%;
+}
+
+.project_category{
+    font-weight: 200;
+    font-family: 'Arial';
+    overflow: hidden;
+    margin: 5% 3%;
+}
+
+.project_container{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project_container img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.description_container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.description_container .img{
+    width: 50%;
+    /* height: 500px; */
+    overflow: hidden;
+}
+
+.btn_edit{
+    background-color: rgb(3, 219, 3);
+    width: 100px;
+    height: 35px;
+}
+
+.btn_delete{
+    background-color: red;
+    color: white;
+    font-weight:bold;
+
+    width: 100px;
+    height: 35px;
 }
