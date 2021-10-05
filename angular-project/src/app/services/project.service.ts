@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 import { Project } from "../models/project";
 import { global } from "./global";
 
@@ -49,7 +49,7 @@ export class ProjectService{
         console.log('project to be updated:', params);
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
         
-        return this._http.post(this.url+'/update', params, {headers: headers});
+        return this._http.put(this.url+'/update', params, {headers: headers});
     }
 
 }

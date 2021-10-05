@@ -14,5 +14,7 @@
 <div>
     <a href="#" class="btn_edit">Edit</a>
     <button (click)="deleteProject(project._id)" class="btn_delete">Delete</button>    
-    <!-- error on project._id (property doesn't exist but it works..) -->
+    <!-- error on project._id (property doesn't exist but it works..)
+    FIXED: "project" object type on .ts file deleted -> API and model id names not equal ("_id" vs "id") 
+    -->
 </div>
