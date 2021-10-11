@@ -279,3 +279,7 @@ form input[disabled]{
     width: 100px;
     height: 35px;
 }
+
+.slider{
+    width: 80%;
+}

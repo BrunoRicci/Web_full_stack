@@ -12,9 +12,13 @@
 </div>
 
 <div>
-    <a href="#" class="btn_edit">Edit</a>
-    <button (click)="deleteProject(project._id)" class="btn_delete">Delete</button>    
-    <!-- error on project._id (property doesn't exist but it works..)
-    FIXED: "project" object type on .ts file deleted -> API and model id names not equal ("_id" vs "id") 
-    -->
+    <p *ngIf="confirm == false">
+        <a [routerLink]="['/editproject', project._id]" class="btn_edit">Edit</a>
+        <button (click)="confirm = true" class="btn_delete">Delete</button>    
+    </p>
+
+    <p *ngIf="confirm == true">
+        <a (click)="deleteProject(project._id)" class="btn_edit">Delete</a>
+        <button (click)="confirm = false" class="btn_delete">Cancel</button>    
+    </p>
 </div>

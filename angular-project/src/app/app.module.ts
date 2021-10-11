@@ -12,6 +12,11 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DescriptionComponent } from './components/description/description.component';
+import { EditComponent } from "./components/edit/edit.component";
+import { SliderComponent } from './components/slider/slider.component';
+
+import * as $ from 'jquery';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,10 @@ import { DescriptionComponent } from './components/description/description.compo
     CreateComponent,
     ContactComponent,
     ErrorComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    EditComponent,
+    SliderComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

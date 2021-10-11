@@ -1,1 +1,30 @@
-<p>contact works!</p>
+<br>
+<div>
+    Select slider width:
+</div>
+<br>
+<input appHighlight type="text" [(ngModel)]="sliderWidth" #texts />
+
+
+
+<!-- NOTE: the method called from the parent to gather data from the child (which as @Output decorator)
+        must always send the "$event" (which is sent from it).
+        The $event value contains the data sent from the EventEmitter in the child, that's why it's called "$event"
+-->
+
+<app-slider [customWidth]="sliderWidth"
+            (sliderValues)="getValues($event)" 
+></app-slider>
+
+<br><br>
+
+<div>
+    Values from child element:
+    <br>
+    <div>
+        {{childValues.width}}
+    </div>
+</div>
+<br><br>
+--------------------------------------
+<br>

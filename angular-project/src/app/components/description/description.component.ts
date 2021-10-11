@@ -13,13 +13,14 @@ import { Router, ActivatedRoute, Params } from '@angular/router'
 export class DescriptionComponent implements OnInit {
   public project;   //Deleted type because API object "_id" attibute is not equal to this model's "id" one.
   public url:string;
-
+  public confirm:boolean;
   constructor(
     private _projectService:ProjectService,
     private _router:Router,
     private _route:ActivatedRoute
     ){
       this.url=global.url;
+      this.confirm = false;
     }
     
   ngOnInit(): void {
@@ -30,7 +31,6 @@ export class DescriptionComponent implements OnInit {
 
     })
   }
-
 
   getProject(id){
     this._projectService.getProject(id).subscribe(
@@ -46,18 +46,13 @@ export class DescriptionComponent implements OnInit {
       }
     );
   }
-
-  updateProject(){
-    
-  }
-  
-  
+ 
   deleteProject(id){
     console.log('deleted:', id);
     
     this._projectService.deleteProject(id).subscribe(
       response => {
-        console.log(response);
+        // console.log(response);
         if(response.project){
           this.project = response.project;
           this._router.navigate(['/projects']);   //Return to projects page
