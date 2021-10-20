@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "superagent": "^6.1.0",
     "tslib": "^2.3.1"
   }
 }

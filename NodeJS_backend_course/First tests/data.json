@@ -1,0 +1,10 @@
+{
+    "name":"Bruno",
+    "age": 25,
+    "color":"Orange",
+    "params":{
+        "sports":["Bike","Running", "Tennis"],
+        "foods":["Pizza", "Lasagna"]
+    },
+    "data":["asd","23","321","321321"]
+}

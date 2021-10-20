@@ -1,3 +1,6 @@
 #Backend/node_modules/**
 /node_modules
 /Backend/uploads
+/Sockets_NodeJS/node_modules
+NodeJS_backend_course/node_modules
+NodeJS_backend_course/API/node_modules
